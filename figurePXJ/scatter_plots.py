@@ -10,10 +10,10 @@ class ComparisionScatterPlot(Figure):
 
     def make_plot(self):
         plt.clf()
-        self.plot_ref_line()
         plt.scatter(self.info_dict['x'], self.info_dict['y'], 
                 s=40, c=self.get_colors(),
-                edgecolors='none')
+                edgecolors='none', zorder=2)
+        self.plot_ref_line()
         self.set_axes()
         self.plot_labels()
         self.plot_title()
@@ -23,7 +23,7 @@ class ComparisionScatterPlot(Figure):
         max_value = max(self.info_dict['x_max'], self.info_dict['y_max'])
 
         plt.plot([min_value, max_value], [min_value, max_value],
-                c=self.info_dict['style'].color(2))
+                c=self.info_dict['style'].color(3), zorder=1)
 
     def get_colors(self):
         x = self.info_dict['x']
