@@ -23,7 +23,7 @@ class ComparisionScatterPlot(Figure):
         max_value = max(self.info_dict['x_max'], self.info_dict['y_max'])
 
         plt.plot([min_value, max_value], [min_value, max_value],
-                c=self.info_dict['style'].color(3), zorder=1)
+                c=self.info_dict['style'].color('normal', 'black'), zorder=1)
 
     def get_colors(self):
         x = self.info_dict['x']
@@ -35,12 +35,12 @@ class ComparisionScatterPlot(Figure):
         for i in range(len(x)):
 
             if y[i] > x[i] + threshold:
-                colors.append(self.info_dict['style'].color(0))
+                colors.append(self.info_dict['style'].color('normal', 'basics', 0))
 
             elif x[i] > y[i] + threshold:
-                colors.append(self.info_dict['style'].color(1))
+                colors.append(self.info_dict['style'].color('normal', 'basics', 1))
 
             else:
-                colors.append(self.info_dict['style'].color(2))
+                colors.append(self.info_dict['style'].color('normal', 'black'))
 
         return colors

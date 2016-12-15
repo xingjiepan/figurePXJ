@@ -16,10 +16,14 @@ class Figure:
         plt.savefig(path)
 
     def set_axes(self):
-        plt.axis([self.info_dict['x_min'],
-                  self.info_dict['x_max'],
-                  self.info_dict['y_min'],
-                  self.info_dict['y_max']])
+        x_min, x_max, y_min, y_max = plt.axis()
+        
+        x_min = self.info_dict.setdefault('x_min', x_min)
+        x_max = self.info_dict.setdefault('x_max', x_max)
+        y_min = self.info_dict.setdefault('y_min', y_min)
+        y_max = self.info_dict.setdefault('y_max', y_max)
+
+        plt.axis([x_min, x_max, y_min, y_max])
 
     def plot_labels(self):
         font = FontProperties()
