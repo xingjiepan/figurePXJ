@@ -2,6 +2,27 @@ import matplotlib.pyplot as plt
 from .Figure import Figure
 
 
+class NormalScatterPlot(Figure):
+    '''A class for creating a normal scatter plot.'''
+
+    def __init__(self, info_dict={}):
+        super().__init__(info_dict)
+
+    def make_plot(self):
+        plt.clf()
+        plt.scatter(self.info_dict['x'], self.info_dict['y'],
+                    s=40, c=self.get_colors(),
+                    edgecolors='none')
+        self.set_axes()
+        self.draw_auxiliary_lines()
+        self.plot_labels()
+        self.plot_title()
+
+    def get_colors(self):
+        color_id = self.info_dict.setdefault('color_id', 0)
+        return self.info_dict['style'].color('normal', 'basics', color_id)
+
+
 class ComparisionScatterPlot(Figure):
     '''A class for creating comparision scatter plots.'''
     

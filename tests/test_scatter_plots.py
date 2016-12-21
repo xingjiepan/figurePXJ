@@ -3,6 +3,25 @@
 import pytest
 from figurePXJ import *
 
+
+def test_NormalScatterPlot():
+    info_dict = {'x':[1, 2, 3, 2.5],
+                 'y':[0.5, 3, 5, 2.5],
+                 'x_min':0,
+                 'x_max':10,
+                 'y_min':0,
+                 'y_max':10,
+                 'style':Style('red_blue_black_light'),
+                 'color_id':1,
+                 'x_label':'test_x',
+                 'y_label':'test_y',
+                 'title':'test_title',
+                 'auxiliary_lines':[((1, -1), (1, -2)), ((-1, -1), (1, 2))]}
+
+    nsp = NormalScatterPlot(info_dict)
+    nsp.show()
+
+
 def test_ComparisionScatterPlot():
     info_dict = {'x':[1, 2, 3, 2.5],
                  'y':[0.5, 3, 5, 2.5],

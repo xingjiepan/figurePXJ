@@ -10,7 +10,8 @@ def test_NormalBoxPlot():
                  'y_max': 6,
                  'style':Style('rainbow'),
                  'labels':['a', 'b'],
-                 'title':'test_title'}
+                 'title':'test_title',
+                 'auxiliary_lines':[((1, -1), (1, -2)), ((-1, -1), (1, 2))]}
     
     nbp = NormalBoxPlot(info_dict)
     #nbp.save('test_NormalBoxPlot.png')
