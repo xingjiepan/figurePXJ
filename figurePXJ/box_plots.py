@@ -19,6 +19,7 @@ class NormalBoxPlot(Figure):
 
         self.get_colors(bp)
         self.set_axes()
+        self.draw_auxiliary_lines()
         self.plot_title()
     
     def get_colors(self, bp):

@@ -14,7 +14,8 @@ def test_ComparisionScatterPlot():
                  'style':Style('red_blue_black_light'),
                  'x_label':'test_x',
                  'y_label':'test_y',
-                 'title':'test_title'}
+                 'title':'test_title',
+                 'auxiliary_lines':[((1, -1), (1, -2)), ((-1, -1), (1, 2))]}
     
     csp = ComparisionScatterPlot(info_dict)
     #csp.save('test_ComparisionScatterPlot.png')

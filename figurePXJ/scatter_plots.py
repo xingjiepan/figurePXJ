@@ -15,6 +15,7 @@ class ComparisionScatterPlot(Figure):
                 edgecolors='none', zorder=2)
         self.plot_ref_line()
         self.set_axes()
+        self.draw_auxiliary_lines()
         self.plot_labels()
         self.plot_title()
 
