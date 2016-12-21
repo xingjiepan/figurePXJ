@@ -12,8 +12,9 @@ setup(
         'figurePXJ',
     ],
     install_requires=[
-        "numpy",
-        "matplotlib",
+        'numpy',
+        'scipy',
+        'matplotlib',
     ],
     entry_points={
         'console_scripts': [
