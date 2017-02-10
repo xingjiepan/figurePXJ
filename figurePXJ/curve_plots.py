@@ -15,8 +15,6 @@ class SmoothCurvePlot(Figure):
         super().__init__(info_dict)
 
     def make_plot(self):
-        plt.clf()
-
         for i, curve in enumerate(self.info_dict['curves']):
             self.plot_one_curve(curve, i)
 

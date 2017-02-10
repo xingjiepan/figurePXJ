@@ -11,8 +11,6 @@ class NormalBoxPlot(Figure):
 
     def make_plot(self):
         
-        plt.clf()
-
         bp = plt.boxplot(self.info_dict['data'],
                     labels=self.info_dict['labels'],
                     patch_artist=True)

@@ -9,7 +9,6 @@ class NormalScatterPlot(Figure):
         super().__init__(info_dict)
 
     def make_plot(self):
-        plt.clf()
         plt.scatter(self.info_dict['x'], self.info_dict['y'],
                     s=40, c=self.get_colors(),
                     edgecolors='none')
@@ -30,7 +29,6 @@ class ComparisionScatterPlot(Figure):
         super().__init__(info_dict)
 
     def make_plot(self):
-        plt.clf()
         plt.scatter(self.info_dict['x'], self.info_dict['y'], 
                 s=40, c=self.get_colors(),
                 edgecolors='none', zorder=2)
