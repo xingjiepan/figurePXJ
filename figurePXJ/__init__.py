@@ -1,5 +1,7 @@
 from .Style import Style
 
+from .distribution_plots import GaussianKernelPlot
+
 from .curve_plots import SmoothCurvePlot 
 
 from .scatter_plots import NormalScatterPlot
