@@ -33,7 +33,7 @@ class GaussianKernelPlot(Figure):
         bin_width = (max(x) - min(x)) / 200
         new_y = np.zeros(200)
 
-        for i in len(x):
+        for i in range(len(x)):
             new_y += y[i] * np.random.normal(x[i], bin_width, 200)
 
         # Draw the plot
