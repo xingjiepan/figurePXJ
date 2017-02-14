@@ -34,7 +34,7 @@ class GaussianKernelPlot(Figure):
         new_y = np.zeros(200)
 
         for i in range(len(x)):
-            new_y += y[i] * np.random.normal(x[i], bin_width, 200)
+            new_y += y[i] * self.gaussian(x[i], bin_width, new_x)
 
         # Draw the plot
 
@@ -43,3 +43,5 @@ class GaussianKernelPlot(Figure):
         plt.plot(new_x, new_y,
                  color=color, linewidth=4)
 
+    def gaussian(self, mu, sigma, x):
+        return 1 / np.sqrt(2 * np.pi * sigma**2) * np.exp( - (x - mu)**2 / (2 * sigma**2))
