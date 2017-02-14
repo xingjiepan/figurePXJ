@@ -30,7 +30,7 @@ class GaussianKernelPlot(Figure):
         y = distribution[1]
 
         new_x = np.linspace(min(x), max(x), 200)
-        bin_width = (max(x) - min(x)) / 200
+        bin_width = (max(x) - min(x)) / 20
         new_y = np.zeros(200)
 
         for i in range(len(x)):
